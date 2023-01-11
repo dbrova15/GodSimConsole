@@ -46,11 +46,11 @@ class Nature:
         self.weather_now_ru = nature_dict[self.weather_now]['ru']
         self.weather_offset = 0
         self.weather_rate = 50
-        self.weather_dict = {"dry": (0, 10),
-                             "sunshine": (10, 30),
-                             "mid": (30, 70),
-                             "rain": (70, 90),
-                             "storm": (90, 100)}
+        self.weather_dict = {"dry": (0, 15),
+                             "sunshine": (15, 35),
+                             "mid": (35, 65),
+                             "rain": (65, 85),
+                             "storm": (85, 100)}
 
     def next_day(self):
         if self.god_word is False:
@@ -69,7 +69,6 @@ class Nature:
 
     def add_weather_rate(self, rate):
         self.god_word = True
-
         self.weather_rate += rate
 
     def get_weather_info(self):
